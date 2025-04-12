@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation System</title>
+    <link rel="stylesheet" href="script.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+
+<body>
+    <div class="header">
+        <div class="container">
+
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="assets-1/img/logo1.svg.webp" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="acc.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="assets-1/img/cart icon.jpg" width="30px" height="30px"></a>
+                <img src="assets-1/img/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Slay & Shine!! <br> Beauty That Speaks for Itself</h1>
+                    <p>"Welcome to Glow & Glamour – your ultimate beauty destination! Discover a world where elegance
+                        meets
+                        innovation, offering a curated selection of skincare, makeup, and self-care essentials designed
+                        to
+                        enhance your natural glow. </p>
+
+
+                    <a href="product.html" class="btn">Explore Now &#8594;</a>
+
+                </div>
+                <div class="col-2">
+                    <img src="assets-1/img/nail polish-2.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--- Featured categories -->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="assets-1/img/lakme eye-liner.png">
+                </div>
+                <div class="col-3">
+                    <img src="assets-1/img/color-pallette.jpeg">
+                </div>
+                <div class="col-3">
+                    <img src="assets-1/img/brush-1.jpeg">
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <!--Featured products-->
+
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-detail.html"><img src="assets-1/img/gallery-2.jpeg"></a>
+                <a href="product-detail.html">
+                    <h4>Matte Lipstick</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail2.html"><img src="assets-1/img/Nail Polish-1.png.png"></a>
+                <a href="product-detail2.html">
+                    <h4>Nail Polish</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$75.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail3.html"><img src="assets-1/img/aloe vera gel.jpeg"></a>
+                <a href="product-detail3.html">
+                    <h4>Aloe Vera Gel</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$40.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail4.html"><img src="assets-1/img/moisturizer 2.jpeg"></a>
+                <a href="product-detail4.html">
+                    <h4>Moisturizer</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <!-- Latest Products -->
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-detail5.html"><img src="assets-1/img/kokie lipstick.jpeg"></a>
+                <h4>Kokie Professional Matte Lip Stick</h4>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$10.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail6.html"><img src="assets-1/img/creed body wash.webp"></a>
+                <a href="product-detail6.html">
+                    <h4>Creed Love In Black Hair And Body Wash</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$100.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail7.html"><img src="assets-1/img/mint spray.jpeg"></a>
+                <a href="product-detail7.html">
+                    <h4>Garden Mint Room Spray (Double Strength)</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$20.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail8.html"><img src="assets-1/img/garnier cream.jpeg"></a>
+                <a href="product-detail8.html">
+                    <h4>Garnier Nutrisse Nourishing Hair Color Creme</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$10.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-detail9.html"><img src="assets-1/img/opi nail polish.jpeg"></a>
+                <a href="product-detail9.html">
+                    <h4>OPI Infinite Shine, Nail Lacquer Nail Polish</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$15.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail10.html"><img src="assets-1/img/nice n easy color.jpeg"></a>
+                <a href="product-detail10.html">
+                    <h4>Nice 'n Easy Permanent Color</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$10.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-detail11.html"><img src="assets-1/img/mint spray.jpeg"></a>
+                <a href="product-detail11.html">
+                    <h4>Garden Mint Room Spray (Double Strength)</h4>
+                </a>
+                <div class="stars">
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span class="filled">&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>$20.00</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- offer -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="assets-1/img/clairol2.jpeg" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively available on</p>
+                    <h1>Clairol Textures & Tones 4RC Cherrywood</h1>
+                    <small>Turn up the heat with Clairol Textures & Tones 4RC Cherrywood, the perfect fusion of rich red
+                        and deep brown hues designed especially for textured hair. .</small>
+
+                    <a href="https://www.clairol.com/en-US/products/product/textures-and-tones" class="btn">Buy Now
+                        &#8594;</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>"Nice 'n Easy really lives up to its name! The application was simple, and the color came out
+                        rich and natural-looking. It covered all my grays and left my hair feeling soft and shiny.
+                        Definitely a great at-home coloring option!"
+                    </p>
+
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <img src="assets-1/img/user-1.jpeg">
+                    <h3>Elena </h3>
+
+                </div>
+
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>"Rich Color, Vibrant Shine!"
+                        I absolutely love this hair color! The 4RC Cherrywood shade gave my hair a deep, radiant red
+                        tone with beautiful warm undertones. It’s perfect for textured hair—left my curls soft.
+                    </p>
+
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <img src="assets-1/img/user-3.jpeg">
+                    <h3>Sean Parker</h3>
+
+                </div>
+
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>"Absolutely refreshing! The Garden Mint Room Spray has a crisp, clean scent that instantly
+                        freshens up any space. The double strength formula really lasts — just a couple of sprays and my
+                        room smells !"
+                    </p>
+
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <img src="assets-1/img/user-4.jpeg">
+                    <h3>Tiya</h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brands -->
+    <div class="brands">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <a
+                        href="https://www.kokiecosmetics.com/?srsltid=AfmBOopCp9mxLZhaVnH_F67lpnZjO-xUl1JUTm_TKrA0dEBXU8Wqr74b"><img
+                            src="assets-1/img/kokie logo-2.png"></a>
+                </div>
+                <div class="col-5">
+                    <a href="https://www.creedfragrance.com/"><img src="assets-1/img/creed logo.png"></a>
+
+                </div>
+                <div class="col-5">
+                    <a href="https://www.garnier.in/"><img src="assets-1/img/garnier logo.png"></a>
+                </div>
+                <div class="col-5">
+                    <a href="https://www.opi.com/"><img src="assets-1/img/opi logo.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p> Download Our App on Android & iOS Today!</p>
+                    <div class="app-logo">
+                        <img src="assets-1/img/playstore logo 5.png">
+                        <img src="assets-1/img/app store logo-5.png">
+
+                    </div>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blogspot</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>X</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- js for toggle menu -->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+
+            MenuItems.style.maxHeight = "0px";
+
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else {
+                    MenuItems.style.maxHeight = "0px";
+                }
+            } 
+        </script>
+
+        <!-- js for product gallery -->
+
+        <script>
+            var ProductImg = document.getElementsById("ProductImg");
+            var SmallImg = document.getElementsByClassName("small-img");
+
+
+            SmallImg[0].onclick = function () {
+                ProductImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                ProductImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                ProductImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                ProductImg.src = SmallImg[3].src;
+            }
+        </script>
+</body>
+
+</html>
