@@ -95,31 +95,31 @@
     <!--trending recommendations-->
     <!--'Name', 'ReviewCount', 'Brand', 'ImageURL', 'Rating'-->
     <!-- Products -->
-    {% if content_based_rec is not none and not content_based_rec.empty %}
+    {% if recommended_products %}
     <div class="container mt-5">
         <h2 class="text-center mb-4">Recommended Products</h2>
         <div class="row mt-4">
-            {% for product in content_based_rec %}
+            {% for i in range(recommended_products|length) %}
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="{{ product['ImageURL'] }}" class="card-img-top" alt="{{ product['Name'] }}"
-                        style="height: 200px;">
+                    <img src="{{ random_product_image_urls[i] }}" class="card-img-top"
+                        alt="{{ recommended_products[i]['Name'] }}" style="height: 200px;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ truncate(product['Name'],12) }}</h5>
-                        <p class="card-text">Brand: {{ product['brand'] }}</p>
+                        <h5 class="card-title">{{ truncate(recommended_products[i]['Name'], 12) }}</h5>
+                        <p class="card-text">Brand: {{ recommended_products[i]['Brand'] }}</p>
                         <button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#productModal{{ loop.index0 }}">Buy Now</button>
+                            data-target="#productModal{{ i }}">Buy Now</button>
                     </div>
                 </div>
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="productModal{{ loop.index0 }}" tabindex="-1" role="dialog"
+            <div class="modal fade" id="productModal{{ i }}" tabindex="-1" role="dialog"
                 aria-labelledby="productModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="productModalLabel">{{ product['Name'] }}</h5>
+                            <h5 class="modal-title" id="productModalLabel">{{ recommended_products[i]['Name'] }}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -127,14 +127,14 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="{{ product['ImageURL'] }}" class="img-fluid" alt="{{ product['Name'] }}"
-                                        style="height: 200px;">
+                                    <img src="{{ random_product_image_urls[i] }}" class="img-fluid"
+                                        alt="{{ recommended_products[i]['Name'] }}" style="height: 200px;">
                                 </div>
                                 <div class="col-md-8">
-                                    <p><strong>Brand:</strong> {{ product['Brand'] }}</p>
-                                    <p><strong>Review Count:</strong> {{ product['ReviewCount'] }}</p>
-                                    <p><strong>Rating:</strong> {{ product['Rating'] }}</p>
-                                    <p><strong>Price:</strong> ₹{{ random_price }}</p>
+                                    <p><strong>Brand:</strong> {{ recommended_products[i]['Brand'] }}</p>
+                                    <p><strong>Review Count:</strong> {{ recommended_products[i]['ReviewCount'] }}</p>
+                                    <p><strong>Rating:</strong> {{ recommended_products[i]['Rating'] }}</p>
+                                    <p><strong>Price:</strong> ₹{{ random_price[i] }}</p>
                                 </div>
                             </div>
                         </div>
@@ -146,6 +146,7 @@
                 </div>
             </div>
             {% endfor %}
+
         </div>
     </div>
     {% endif %}

@@ -224,24 +224,31 @@ def recommendations():
         print(f"🔍 Product received: {prod}")
         print(f"🔢 Recommendations requested: {nbr}")
 
-        content_based_rec = content_based_recommendations(train_data, prod, top_n=nbr)
+        raw_df = content_based_recommendations(train_data, prod, top_n=nbr)
 
-        if content_based_rec.empty:
+        if raw_df.empty:
             message = f"No recommendations available for '{prod}'."
-            return render_template('main.html', message=message, content_based_rec=[],
-                                   random_product_image_urls=[], random_price=[], truncate=truncate)
+            return render_template('main.html',
+                                   message=message,
+                                   recommended_products=[],
+                                   random_product_image_urls=[],
+                                   random_price=[],
+                                   truncate=truncate)
 
         # Generate dummy image URLs and prices
-        random_product_image_urls = [random.choice(random_image_urls) for _ in range(len(content_based_rec))]
+        random_product_image_urls = [random.choice(random_image_urls) for _ in range(len(raw_df))]
         price = [40, 50, 60, 70, 100, 122, 106, 50, 30, 50]
-        random_price = [random.choice(price) for _ in range(len(content_based_rec))]
+        random_price = [random.choice(price) for _ in range(len(raw_df))]
 
+        recommended_products = raw_df.to_dict(orient='records')
 
         return render_template('main.html',
-                               content_based_rec=content_based_rec,
+                               recommended_products=recommended_products,
                                truncate=truncate,
                                random_product_image_urls=random_product_image_urls,
                                random_price=random_price)
+
+
 
 
 
