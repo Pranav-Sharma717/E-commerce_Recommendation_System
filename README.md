@@ -24,5 +24,3 @@ A content-based recommendation engine that suggests similar products based on us
 
 ---
 
-## 📁 Project Structure
-
